@@ -6,7 +6,7 @@ class ProjectColors {
 
   ///light color scheme
   static ColorScheme lightColorScheme = const ColorScheme.light().copyWith(
-    primary: const Color.fromARGB(255, 208, 63, 60),
+    primary: const Color.fromARGB(255, 255, 4, 0),
     secondary: const Color.fromARGB(255, 68, 81, 116),
     onSecondary: const Color.fromARGB(255, 216, 221, 232),
     tertiary: const Color.fromARGB(255, 204, 209, 224),

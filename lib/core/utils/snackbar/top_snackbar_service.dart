@@ -1,7 +1,7 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fast_start/const/globals.dart';
-import 'package:flutter_fast_start/core/utils/snackbar/snackbar_service.dart';
+import 'package:flutter_fast_start/core/utils/snackbar/abstract/snackbar_service.dart';
 
 // ignore_for_file: flutter_style_todos
 

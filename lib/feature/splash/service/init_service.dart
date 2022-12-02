@@ -3,7 +3,7 @@
 import 'package:flutter_fast_start/core/cache/abstract/cache_repository.dart';
 import 'package:flutter_fast_start/core/injection/locator.dart';
 import 'package:flutter_fast_start/core/routing/abstract/router_service.dart';
-import 'package:flutter_fast_start/core/routing/routes.dart';
+import 'package:flutter_fast_start/core/routing/model/routes.dart';
 
 ///It's a first open service which works async with splash screen
 class InitService {

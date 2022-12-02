@@ -41,7 +41,7 @@ class AutoRouterService extends RouterService {
   }
 
   @override
-  void popUntilMainPage() {
+  void popUntilRoot() {
     _appRouter.popUntilRoot();
   }
 

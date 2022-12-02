@@ -13,6 +13,6 @@ abstract class RouterService {
   void pushNamedRemoveStack(String appRoute);
   void pop();
   void popUntil(String appRoute);
-  void popUntilMainPage();
+  void popUntilRoot();
   String currentRouteName();
 }

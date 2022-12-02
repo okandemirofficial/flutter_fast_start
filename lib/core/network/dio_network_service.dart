@@ -3,8 +3,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_fast_start/core/injection/locator.dart';
 import 'package:flutter_fast_start/core/network/network_paths.dart';
-import 'package:flutter_fast_start/core/network/networt_service.dart';
-import 'package:flutter_fast_start/core/utils/snackbar/snackbar_service.dart';
+import 'package:flutter_fast_start/core/network/abstract/networt_service.dart';
+import 'package:flutter_fast_start/core/utils/snackbar/abstract/snackbar_service.dart';
 
 ///Dio representation of network service
 class DioNetworkService extends NetworkService {
