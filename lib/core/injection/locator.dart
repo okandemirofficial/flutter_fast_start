@@ -1,7 +1,7 @@
 import 'package:flutter_fast_start/core/cache/abstract/cache_repository.dart';
 import 'package:flutter_fast_start/core/cache/isar_cache_repository.dart';
-import 'package:flutter_fast_start/core/network/dio_network_service.dart';
 import 'package:flutter_fast_start/core/network/abstract/networt_service.dart';
+import 'package:flutter_fast_start/core/network/dio_network_service.dart';
 import 'package:flutter_fast_start/core/routing/abstract/router_service.dart';
 import 'package:flutter_fast_start/core/routing/auto_route_service.dart';
 import 'package:flutter_fast_start/core/utils/snackbar/abstract/snackbar_service.dart';
