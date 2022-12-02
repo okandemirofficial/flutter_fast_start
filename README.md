@@ -102,7 +102,9 @@ Simon Leiser (Producer of both Isar and Hive package) stated Isar as the future 
 My Isar service comes with AppSettingsModel which useful for cache app settings (user token or theme mode etc.). In IsarRepository has getAppsettings() and putAppSettings() methods which returns AppSettingsModel.
 
 `locator<CacheRepository>().getAppsettings();`
+
 `locator<CacheRepository>().putAppsettings();`
+
 
 AppSettingsModel has bool type predefined value of `isFirstLaunch`
 
@@ -111,10 +113,15 @@ AppSettingsModel has bool type predefined value of `isFirstLaunch`
 Auto Route service class has routing methods and also has Routes.dart class to store route names.
 
 `locator<RouterService>().pushNamed(Routes.onboard);`
+
 `locator<RouterService>().pushNamedRemoveStack(Routes.home);`
+
 `locator<RouterService>().pop();`
+
 `locator<RouterService>().popUntil(Routes.home);`
+
 `locator<RouterService>().popUntilRoot();`
+
 `final route = locator<RouterService>().currentRouteName();`
 
 ##### Auto Route Service not requires BuildContext but some limitations.
