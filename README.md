@@ -185,5 +185,5 @@ ListViewWithSpacing.s(
 - OnBoard and Splash screens are defined as feature. Splash screen is calling initService and if application launchs for first time, redirects to OnBoard screen.
 
 ### All Contrubutions are Welcome!
-I am completely open to improvements and fixes. Please open issue or make pull request to contribute this. Thanks in advance!
+I completely open to improvements and fixes. Please open issue or make pull request to contribute this. Thanks in advance!
 
