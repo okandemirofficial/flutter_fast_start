@@ -1,6 +1,6 @@
 # Flutter Fast Start
 #
-A fast start flutter project to make aps faster and skip setup on every application. I am personally using this structure while creating a new project
+A fast start flutter project to make apps faster and skip setup on every application. I am personally using this structure while creating a new project
 
 # Concept
 - ##### MVMM Architecture
@@ -22,7 +22,7 @@ A fast start flutter project to make aps faster and skip setup on every applicat
 
 ###### Others
 - Flutter SVG
-- Json Serializer
+- JSON Serializer
 - Lottie
 - Google Fonts
 - Url Launcher
@@ -91,22 +91,21 @@ lib
 # Pre-prepared Services
 
 ### Get_it and Locator Variable
-I am using Get.it as service locator package. All of services and repositories which not requires `BuildContext` or `WidgetRef` should be called from Get.it package. Also all services are dependecy injected. You can create your services & repositories and edit from `lib/core/injection/locator.dart`
+I am using Get.it as a service locator package. All services and repositories which not require `BuildContext` or `WidgetRef` should be called from Get.it package. Also, all services are dependency injected. You can create your services & repositories and edit from `lib/core/injection/locator.dart`
 
-> You may think also think to make your dependency injectons via Riverpod. I personally prefered to make separation between service locator and state packages.
-
+> You may think also think to make your dependency injections via Riverpod. I personally preferred to make a separation between the service locator and state packages.
 ### Isar Service
 ###### Why Isar?
-Simon Leiser (Producer of both Isar and Hive package) stated Isar as the future of Hive on the Isar documentation. So I decided to use Isar in my projects.
+Simon Leiser (Producer of both Isar and Hive packages) stated Isar is the future of Hive on the Isar documentation. So I decided to use Isar in my projects.
 ##### Isar Service Repository and AppSettingsModel
-My Isar service comes with AppSettingsModel which useful for cache app settings (user token or theme mode etc.). In IsarRepository has getAppsettings() and putAppSettings() methods which returns AppSettingsModel.
+My Isar service comes with AppSettingsModel which is useful for caching app settings (user token or theme mode etc.). In IsarRepository has getAppsettings() and putAppSettings() methods which return AppSettingsModel.
 
 `locator<CacheRepository>().getAppsettings();`
 
 `locator<CacheRepository>().putAppsettings();`
 
 
-AppSettingsModel has bool type predefined value of `isFirstLaunch`
+AppSettingsModel has a bool type predefined value of `isFirstLaunch`
 
 ### AutoRoute Service
 
@@ -124,14 +123,13 @@ Auto Route service class has routing methods and also has Routes.dart class to s
 
 `final route = locator<RouterService>().currentRouteName();`
 
-##### Auto Route Service not requires BuildContext but some limitations.
+##### Auto Route Service not requires BuildContext but has some limitations.
 From the AutoRoute documentation:
 > Note: navigating without context is not recommended in nested navigation unless you use navigate instead of push and you provide a full hierarchy. e.g router.navigate(SecondRoute(children: [SubChild2Route()]))
-
 ### Dio Network Service 
-Network service consist of only one method asks NetworkPaths class as a parameter. It pushes all the error messages automaticly via notification service.
+Network service consists of only one method that asks NetworkPaths class as a parameter. It pushes all the error messages automatically via the notification service.
 
-If you have a API request you should insert your API endpoints to NetworkPaths class and use this:
+If you have an API request you should insert your API endpoints to NetworkPaths class and use this:
 `var data = locator<NetworkService>().execute(NetworkPaths.getUserById);`
 
 ### Snackbar Notification Service 
@@ -144,7 +142,7 @@ message: message
 );
 ```
 ### Paddings
-It provides an easy and standardized way to apply paddings. Also it has useful ListView, Colum and Row methods.
+It provides an easy and standardized way to apply paddings. Also, it has useful ListView, Colum, and Row methods.
 
 ##### Measurements
 Measurements can be changed from **lib/const/project_paddings.dart**
@@ -153,7 +151,7 @@ Measurements can be changed from **lib/const/project_paddings.dart**
 - Large (.l) gives **32px** of padding(s)
 - XLarge (.xl) gives **64px** of padding(s)
 
-**Every Padding widgets has child property and named constructors as measurement**
+**Every Padding widget has child property and named constructors as measurement**
 
 ##### Example:
 To give **8px** of top padding
@@ -169,15 +167,15 @@ PaddingTop.s(child: Container());
 - `PaddingVertical`
 - `PaddingTopLeft`
 
-##### ListView, Column and Row children spacing's
-Paddings.dart has also some widgets which helps gives padding each of child
+##### ListView, Column, and Row children spacing's
+Paddings.dart has also some widgets which help gives padding to each child
 
-- `ListViewWithSpacing` ==> Gives padding between each children of ListView
-- `ColumnWithSpacing` ==> Gives padding between each children of Column
-- `RowWithSpacing` ==> Gives padding between each children of Row
+- `ListViewWithSpacing` ==> Gives padding between each child of ListView
+- `ColumnWithSpacing` ==> Gives padding between each child of Column
+- `RowWithSpacing` ==> Gives padding between each child of Row
 
 ##### Example:
-To give **8px** of top padding to each children of ListView
+To give **8px** of top padding to each child of ListView
 ```
 ListViewWithSpacing.s(
     children: [
@@ -187,10 +185,9 @@ ListViewWithSpacing.s(
 ```
 
 ### Other Services and Notes
-- `ApplyColor` widget changes all text color of child which uses theme style (Theme.of(context).textTheme...). **It mandatory to extract it's child or use builder**
-- `TextFormFieldBase`, `PasswordFieldBase` and `MailFieldBase` are form fields which provides some easy pre-defined methods like Regex validators, obsecuring text or comparing passwords.
-- OnBoard and Splash screens are defined as feature. Splash screen is calling initService and if application launchs for first time, redirects to OnBoard screen.
+- `ApplyColor` widget changes all text colors of the child which uses theme style (Theme.of(context).textTheme...). **It is mandatory to extract its child or use builder**
+- `TextFormFieldBase`, `PasswordFieldBase` and `MailFieldBase` are form fields that provide some easy pre-defined methods like Regex validators, obscuring text, or comparing passwords.
+- OnBoard and Splash screens are defined as features. A splash screen is called initService and if the application launches for the first time, redirects to the OnBoard screen.
 
-### All Contrubutions are Welcome!
-I completely open to improvements and fixes. Please open issue or make pull request to contribute this. Thanks in advance!
-
+### All Contributions are Welcome!
+I am completely open to improvements and fixes. Please open an issue or make a pull request to contribute to this. Thanks in advance!
