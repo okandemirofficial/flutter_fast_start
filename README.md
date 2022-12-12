@@ -1,5 +1,8 @@
 # Flutter Fast Start
 #
+
+<img src="flutter_fast_start.png" alt="Flutter fast start" />
+
 A fast start flutter project to make apps faster and skip setup on every application. I am personally using this structure while creating a new project
 
 # Concept
