@@ -20,7 +20,7 @@ part 'auto_route.gr.dart';
       page: OnBoardView,
       name: Routes.onBoard,
       path: Routes.onBoard,
-    )
+    ),
   ],
 )
 // extend the generated private router

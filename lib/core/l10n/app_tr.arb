@@ -1,7 +1,0 @@
-{
-    "helloWorld": "Merhaba dunya!",
-    "@helloWorld": {
-        "description": "The conventional newborn programmer greeting"
-    },
-    "report": "Rapor"
-}
