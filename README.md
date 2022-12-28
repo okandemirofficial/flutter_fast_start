@@ -17,7 +17,7 @@ A fast start flutter project to make apps faster and skip setup on every applica
 - ##### [Auto Route](https://pub.dev/packages/auto_route) for routing (no BuildContext!)
 - ##### [Get.it](https://pub.dev/packages/get_it) for singleton & dependency injection
 - ##### [Dio](https://pub.dev/packages/dio) for network requests
-- ##### [intl](https://pub.dev/packages/intl) for internalization & localization
+- ##### [Easy Localization](https://pub.dev/packages/easy_localization) for internalization & localization
 - ##### Notification service with [Awesome Snackbar](https://pub.dev/packages/awesome_snackbar_content) (no BuildContext!)
 - ##### Asset Generator with [FlutterGen](https://pub.dev/packages/flutter_gen)
 - ##### [Very Good Analysis](https://pub.dev/packages/very_good_analysis) for lints
@@ -31,6 +31,7 @@ A fast start flutter project to make apps faster and skip setup on every applica
 - Url Launcher
 - Splash Screen
 - Onboarding Screen
+- Rename
 
 # Folder Structure
 ```
@@ -191,6 +192,7 @@ ListViewWithSpacing.s(
 - `ApplyColor` widget changes all text colors of the child which uses theme style (Theme.of(context).textTheme...). **It is mandatory to extract its child or use builder**
 - `TextFormFieldBase`, `PasswordFieldBase` and `MailFieldBase` are form fields that provide some easy pre-defined methods like Regex validators, obscuring text, or comparing passwords.
 - OnBoard and Splash screens are defined as features. A splash screen is called initService and if the application launches for the first time, redirects to the OnBoard screen.
+- Change package names with Rename. Use `flutter pub run change_app_package_name:main com.new.package.name`
 
 ### All Contributions are Welcome!
 I am completely open to improvements and fixes. Please open an issue or make a pull request to contribute to this. Thanks in advance!
