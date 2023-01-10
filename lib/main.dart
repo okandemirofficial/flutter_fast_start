@@ -1,9 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fast_start/const/globals.dart';
 import 'package:flutter_fast_start/core/injection/locator.dart' as get_it;
+import 'package:flutter_fast_start/core/injection/locator.dart';
 import 'package:flutter_fast_start/core/routing/abstract/router_service.dart';
 import 'package:flutter_fast_start/core/theme/project_theme.dart';
+import 'package:flutter_fast_start/core/utils/snackbar/abstract/snackbar_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() async {
@@ -11,6 +14,18 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await get_it.Locator.initAsync();
+
+  FlutterError.onError = (details) {
+    FlutterError.presentError(details);
+  };
+  PlatformDispatcher.instance.onError = (error, stack) {
+    locator<SnackbarService>().showSnackbar(
+      type: SnackBarType.error,
+      title: 'ERROR',
+      message: error.toString(),
+    );
+    return false;
+  };
   runApp(
     ProviderScope(
       child: EasyLocalization(
