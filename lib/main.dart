@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fast_start/const/globals.dart';
 import 'package:flutter_fast_start/core/injection/locator.dart' as get_it;
 import 'package:flutter_fast_start/core/routing/abstract/router_service.dart';
 import 'package:flutter_fast_start/core/theme/project_theme.dart';
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter Fast Start',
       localizationsDelegates: context.localizationDelegates,
+      //Provides show snackbar without BuildContext
+      //locator<SnackbarService>().showSnackbar()
+      scaffoldMessengerKey: scaffoldMessengerKey,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       routeInformationParser:
